@@ -273,7 +273,8 @@ def frecuency_meet_employee(employee: dict) -> str:
 
 ##### Explanation
 
-<iframe src="https://miro.com/app/live-embed/uXjVPd_N6v4=/?moveToViewport=-559,-208,846,1071&embedId=45747984343" scrolling="no" allowfullscreen width="768" height="432" frameborder="0"></iframe>
+![Permutations](./assets/permutations.jpg)
+*[View Image on the Web](https://miro.com/app/live-embed/uXjVPd_N6v4=/?moveToViewport=-559,-208,846,1071&embedId=45747984343)*
 
 ##### How does it work?
 
@@ -316,11 +317,13 @@ def number_of_coincidences(schedule1: dict, schedule2: dict) -> int:
     entry, exit = 0, 1
     for day in schedule1:
         if day in schedule2:
-            firstEmployeeEntry, secondEmployeeEntry = int(schedule1[day][entry]), int(schedule2[day][entry])
-            firstEmployeeExit, secondEmployeeExit = int(schedule1[day][exit]), int(schedule2[day][exit])
-            if (firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit):
-                counter += 1
-            elif (secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit):
+            firstEmployeeEntry = int(schedule1[day][entry])
+            firstEmployeeExit = int(schedule1[day][exit])
+            secondEmployeeEntry = int(schedule2[day][entry])
+            secondEmployeeExit = int(schedule2[day][exit])
+            firstCondition = firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit
+            secondCondition = secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit
+            if (firstCondition or secondCondition):
                 counter += 1
     return counter
 ```
@@ -357,13 +360,16 @@ def number_of_coincidences(schedule1: dict, schedule2: dict) -> int:
     entry, exit = 0, 1 # O(1)
     for day in schedule1: # O(1) Becasuse is a loop with max of 7 repetitions 
         if day in schedule2: # O(1)
-            firstEmployeeEntry, secondEmployeeEntry = int(schedule1[day][entry]), int(schedule2[day][entry]) # O(1)
-            firstEmployeeExit, secondEmployeeExit = int(schedule1[day][exit]), int(schedule2[day][exit]) # O(1)
-            if (firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit): # O(1)
+            firstEmployeeEntry = int(schedule1[day][entry]) # O(1)
+            firstEmployeeExit = int(schedule1[day][exit]) # O(1)
+            secondEmployeeEntry = int(schedule2[day][entry]) # O(1)
+            secondEmployeeExit = int(schedule2[day][exit]) # O(1)
+            firstCondition = firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit # O(1)
+            secondCondition = secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit # O(1)
+            if (firstCondition or secondCondition): # O(1)
                 counter += 1 # O(1)
-            elif (secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit): # O(1)
-                counter += 1 # O(1)
-    return counter
+    return counter # O(1)
+# O(1)
 ```
 
 </details>
@@ -372,7 +378,8 @@ def number_of_coincidences(schedule1: dict, schedule2: dict) -> int:
 
 ##### Explanation
 
-<iframe src="https://miro.com/app/live-embed/uXjVPd-j7Tg=/?moveToViewport=-2031,-676,2465,1232&embedId=993934599319" scrolling="no" allowfullscreen width="768" height="432" frameborder="0"></iframe>
+![Permutations](./assets/timeIntersection.jpg)
+*[View Image on the Web](https://miro.com/app/live-embed/uXjVPd-j7Tg=/?moveToViewport=-2031,-676,2465,1232&embedId=993934599319)*
 
 ```mermaid
 flowchart TD
