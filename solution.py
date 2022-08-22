@@ -38,13 +38,13 @@ def number_of_coincidences(schedule1: dict, schedule2: dict) -> int:
     entry, exit = 0, 1
     for day in schedule1:
         if day in schedule2:
-            firstEmployeeEntry, secondEmployeeEntry = int(
-                schedule1[day][entry]), int(schedule2[day][entry])
-            firstEmployeeExit, secondEmployeeExit = int(
-                schedule1[day][exit]), int(schedule2[day][exit])
-            if (firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit):
-                counter += 1
-            elif (secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit):
+            firstEmployeeEntry = int(schedule1[day][entry])
+            firstEmployeeExit = int(schedule1[day][exit])
+            secondEmployeeEntry = int(schedule2[day][entry])
+            secondEmployeeExit = int(schedule2[day][exit])
+            firstCondition = firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit
+            secondCondition = secondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit
+            if (firstCondition or secondCondition):
                 counter += 1
     return counter
 
