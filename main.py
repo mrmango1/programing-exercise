@@ -2,7 +2,7 @@ from solution.functions import frecuency_meet_employee, file_to_dict
 
 
 def main():
-    file = input("Ingrese la direccion del archivo o arrastrelo aqui: ")
+    file = input("Enter the file path or drag it here: ")
     print(frecuency_meet_employee(file_to_dict(file)))
 
 

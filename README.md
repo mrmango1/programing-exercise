@@ -429,7 +429,15 @@ cd ./programing-exercise
 ### 3. Execute
 
 ```sh
-python solution.py
+python main.py
+```
+
+### 4. Use
+
+Drag file or place its path
+
+```sh
+Enter the file path or drag it here: '/home/mrmango1/Document/test/test1.txt'
 ```
 
 ## You don't have python?
