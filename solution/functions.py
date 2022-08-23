@@ -12,7 +12,7 @@ def file_to_dict(path: str) -> dict:
     employee = {}
     with open(path.strip("'")) as file:
         for line in file:
-            items = line.rstrip("\n").split("=")
+            items = line.rstrip("\n").replace(" ", "").split("=")
             schedule = items[1].split(",")
             dayTimeList = {}
             for dayTime in schedule:
@@ -73,11 +73,3 @@ def frecuency_meet_employee(employees: dict) -> str:
             if (i == len(employeeNames)-2):
                 return coincidences
             coincidences += "\n"
-
-
-def main():
-    file = input("Ingrese la direccion del archivo o arrastrelo aqui: ")
-    print(frecuency_meet_employee(file_to_dict(file)))
-
-
-main()
