@@ -1,7 +1,11 @@
 name: Pytest
 
-on: [push]
-
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**/README.md"
 jobs:
   build:
     runs-on: ${{ matrix.os }}
