@@ -1,6 +1,9 @@
 # How often employees meet each other in the office
 
+[![Tests](https://github.com/mrmango1/programing-exercise/actions/workflows/pytest.yml/badge.svg)](https://github.com/mrmango1/programing-exercise/actions/workflows/pytest.yml) [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://github.com/mrmango1/programing-exercise/actions/workflows/pytest.yml)[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/mrmango1/programing-exercise/actions/workflows/pytest.yml)
+
 ---
+
 ## Table of Contents
 
 - [The Problem](#the-problem)
