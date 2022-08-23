@@ -3,7 +3,7 @@
 ---
 ## Table of Contents
 
-- [The Probelm](#the-problem)
+- [The Problem](#the-problem)
 - [Solution](#solution)
   - [Prepare the data](#1-prepare-the-data)
   - [Algorithm of permutations](#2-algorithm-of-permutations)
@@ -274,6 +274,7 @@ def frecuency_meet_employee(employee: dict) -> str:
 ##### Explanation
 
 ![Permutations](./assets/permutations.jpg)
+
 *[View Image on the Web](https://miro.com/app/live-embed/uXjVPd_N6v4=/?moveToViewport=-559,-208,846,1071&embedId=45747984343)*
 
 ##### How does it work?
@@ -379,7 +380,10 @@ def number_of_coincidences(schedule1: dict, schedule2: dict) -> int:
 ##### Explanation
 
 ![Permutations](./assets/timeIntersection.jpg)
+
 *[View Image on the Web](https://miro.com/app/live-embed/uXjVPd-j7Tg=/?moveToViewport=-2031,-676,2465,1232&embedId=993934599319)*
+
+##### How does it work?
 
 ```mermaid
 flowchart TD
@@ -388,7 +392,7 @@ B[schedule2: dict]--> G
 D--> |key| E("day")
 D--> |value| F("time")
 E--> |"MO"| G{{"'MO' in schedule2"}}
-G--> |yes| H{{"firstEmployeeEntry <= secondEmployeeExit\nfirstEmployeeEntry >= secondEmployeeEntry"}}
+G--> |yes| H{{"firstEmployeeEntry >= secondEmployeeEntry and firstEmployeeEntry <= secondEmployeeExit\nor\nsecondEmployeeEntry >= firstEmployeeEntry and secondEmployeeEntry <= firstEmployeeExit"}}
 F--> H
 H--> |yes| I("counter=counter+1")
 ```
@@ -457,6 +461,6 @@ sudo dnf install python3
 scoop install python
 ```
 
-#### Or if you are an advanced user I recommend this project
+### Or if you are an advanced user I recommend this tool
 
 [Pyenv](https://github.com/pyenv/pyenv)
