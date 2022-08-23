@@ -440,6 +440,20 @@ Drag file or place its path
 Enter the file path or drag it here: '/home/mrmango1/Document/test/test1.txt'
 ```
 
+## Execute the tests
+
+### 1. At the root of the project folder run
+
+```sh
+pip install -r requirements.txt
+```
+
+### 2. Then
+
+```sh
+pytest
+```
+
 ## You don't have python?
 
 ### If you use Linux use the following commands
